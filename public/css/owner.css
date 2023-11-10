@@ -1,0 +1,496 @@
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #e2e2e2;
+    }
+    
+    .side_section {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container {
+        display: grid;
+        width: 96%;
+        height: auto;
+        margin: 0 auto;
+        grid-template-columns: 12rem auto 20rem;
+        /* background-color: lightcoral; */
+        gap: 1.2rem;
+    }
+    
+    .container aside {
+        height: 100vh;
+        /* background-color: lightslategray; */
+        display: grid;
+        grid-template-rows: 6rem auto 20rem;
+        position: relative;
+        left: 1.3rem;
+    }
+    
+    aside .top {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        position: relative;
+        top: 1rem;
+    }
+    
+    aside .top .logo {
+        width: 5.83rem;
+    }
+    
+    aside .top .logo img {
+        width: 100%;
+        padding-left: 1rem;
+    }
+    
+    aside .close {
+        display: none;
+    }
+    
+    .side_bar {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        position: relative;
+        top: -1rem;
+        height: 86vh;
+    }
+    
+    .side_bar a {
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;
+        height: 3rem;
+        gap: 1rem;
+        transition: all 300ms ease;
+    }
+    
+    .side_bar a h3 {
+        font-weight: 500;
+    }
+    
+    aside .side_bar a span {
+        font-size: 1.6rem;
+        transition: all 300ms ease;
+    }
+    
+    aside .side_bar a:last-child {
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+    }
+    
+    aside .side_bar a.active {
+        color: rgb(0, 0, 255);
+        background-color: rgba(147, 147, 194, 0.798);
+        margin-left: 0;
+    }
+    
+    aside .side_bar a.active::before {
+        content: ' ';
+        width: 6px;
+        height: 100%;
+        background-color: blue;
+    }
+    
+    aside .side_bar a.active span {
+        color: rgb(0, 0, 255);
+        margin-left: calc(1rem - 5px);
+    }
+    
+    aside .side_bar a:hover {
+        color: rgb(0, 0, 255);
+    }
+    
+    aside .side_bar a:hover span {
+        margin-left: 0.8rem;
+    }
+    /* =====================main ------------ */
+    
+    main {
+        position: relative;
+        top: 2rem;
+        left: 2rem;
+        width: 100%;
+        height: 100%;
+    }
+    
+    main .date {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.5rem 1.6rem;
+        background-color: #989494eb;
+    }
+    
+    main .date input[type='date'] {
+        background-color: transparent;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border: none;
+    }
+    
+    main .insights {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: column;
+        gap: 1.6rem;
+        margin-top: 2rem;
+    }
+    
+    .total {
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 6px 2px rgba(53, 52, 52, 0.672);
+    }
+    
+    main .recent_order {
+        margin-top: 1.3rem;
+    }
+    
+    main .recent_order h1 {
+        margin-bottom: 0.8rem;
+    }
+    
+    main .recent_order table {
+        background: #fff;
+        border-radius: 1rem;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 0 4px 2px #ddd2d2cd;
+    }
+    
+    main .recent_order table thead th {
+        border-bottom: 2px solid #e2e2e2;
+        padding: 0.8rem 0px;
+    }
+    
+    main .recent_order table tbody td {
+        border-bottom: 2px solid #e2e2e2de;
+        padding: 0.6rem 0px;
+    }
+    
+    main .recent_order table tbody tr:last-child td {
+        border: none;
+    }
+    
+    main .recent_order table tbody tr td:nth-child(3) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .cost_img {
+        width: 40px;
+        height: 40px;
+        background: blueviolet;
+        border-radius: 50%;
+    }
+    
+    .cost_img img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .more_btn {
+        width: 3rem;
+        border: none;
+        background: blue;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        padding: 0.2rem;
+        box-shadow: 0 0 2px 1px rgb(11, 11, 51);
+        transition: all 300ms linear;
+    }
+    
+    .more_btn:hover {
+        background: blueviolet;
+    }
+    /* owner car page style */
+    
+    main .search_car {
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    main .search_car form input {
+        border: none;
+        background: white;
+        padding: 0.3rem;
+        font-size: 1rem;
+        box-shadow: 0 0 4px 2px #877f7fc4;
+        border-radius: 0.3rem;
+        transition: all 300ms ease-in-out;
+    }
+    
+    main .search_car form input[type='submit'] {
+        background: blue;
+        color: white;
+    }
+    
+    main .search_car form input[type='submit']:hover {
+        background: blueviolet;
+        box-shadow: 0 0 6px 1px rgba(19, 9, 28, 0.66);
+    }
+    
+    main .search_car form button {
+        border: none;
+        padding: 0.6rem;
+        font-size: 1rem;
+        box-shadow: 0 0 4px 2px #877f7fc4;
+        border-radius: 0.3rem;
+        transition: all 300ms ease-in-out;
+        float: right;
+        background: blue;
+        color: white;
+    }
+    
+    main .search_car form button:hover {
+        background: blueviolet;
+        box-shadow: 0 0 6px 1px rgba(19, 9, 28, 0.66);
+    }
+    
+    main .cars-main_owner {
+        width: 100%;
+        margin-top: 1.6rem;
+        background: #fff;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    
+    main .cars-main_owner table {
+        width: 100%;
+        text-align: center;
+    }
+    
+    main .cars-main_owner table tr td:nth-child(2) {
+        display: flex;
+        gap: 0.4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main .cars-main_owner table thead th {
+        border-bottom: 2px solid #e2e2e2;
+        padding: 0.8rem 0px;
+    }
+    
+    main .cars-main_owner table tbody td {
+        border-bottom: 2px solid #e2e2e2de;
+        padding: 0.6rem 0px;
+    }
+    
+    main .cars-main_owner table tbody tr:last-child td {
+        border: none;
+    }
+    
+    .car_main_image {
+        width: 40px;
+        height: 40px;
+        background: blueviolet;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .car_main_image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    main .cars-main_owner table tr td button {
+        width: 3rem;
+        border: none;
+        background: blue;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        padding: 0.2rem;
+        box-shadow: 0 0 2px 1px rgb(11, 11, 51);
+        transition: all 300ms linear;
+    }
+    
+    main .cars-main_owner table tr td button:hover {
+        background: blueviolet;
+    }
+    /* add car css */
+    
+    main .main_add_container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    main .main_add_container form {
+        margin-top: 1.6rem;
+    }
+    /* .image-container {
+        display: block;
+        margin: auto;
+        width: 350px;
+        height: 255px;
+        text-align: center;
+    }
+    
+    .img-view {
+        width: 96%;
+        height: 80%;
+        background: #fff;
+        margin: auto;
+        border: 2px dashed;
+        padding: 5px;
+    }
+    
+    .img-view .img-canten {
+        position: relative;
+        top: 30%;
+    }
+     */
+    /* .img-view .img-cencle {
+        position: relative;
+        top: -29%;
+        right: -44%;
+        display: block;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .img-view .img-cencle span {
+        display: none;
+    } */
+    /* .img-view .file-name {
+        position: relative;
+        top: 98px;
+        padding: 5px;
+    }
+    
+    #custome-btn {
+        margin-top: 5%;
+        width: 96%;
+        padding: 2%;
+        border-radius: 21px;
+    }
+    
+    .add-img00 {
+        width: 100%;
+    }
+    
+    .add-img00 img {
+        width: 100%;
+    } */
+    /*car image design*/
+    
+    .picture-container {
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .picture {
+        width: 106px;
+        height: auto;
+        background-color: #999999;
+        border: 4px solid #CCCCCC;
+        color: #FFFFFF;
+        border-radius: none;
+        margin: 0px auto;
+        overflow: hidden;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+    }
+    
+    .picture:hover {
+        border-color: #2ca8ff;
+    }
+    
+    .content.ct-wizard-green .picture:hover {
+        border-color: #05ae0e;
+    }
+    
+    .content.ct-wizard-blue .picture:hover {
+        border-color: #3472f7;
+    }
+    
+    .content.ct-wizard-orange .picture:hover {
+        border-color: #ff9500;
+    }
+    
+    .content.ct-wizard-red .picture:hover {
+        border-color: #ff3b30;
+    }
+    
+    .picture input[type="file"] {
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0 !important;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .picture-src {
+        width: 100%;
+    }
+    /*car design End*/
+    
+    .car-detail-field {
+        display: block;
+        margin: auto;
+        margin-top: 1.6rem;
+        width: 365px;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    
+    .car-detail-field label {
+        display: block;
+        padding: 4px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .car-detail-field input {
+        display: block;
+        width: 100%;
+        height: 24px;
+        font-size: 16px;
+        border: none;
+        background: #a9a9a985;
+        margin-bottom: 12px;
+        padding: 5px;
+    }
+    
+    .search_car .add_btn {
+        font-size: 18px;
+        color: white;
+        background: blue;
+        padding: 9px;
+        border-radius: 12px;
+    }

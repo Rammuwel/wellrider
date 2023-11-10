@@ -1,0 +1,29 @@
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.car img {
+    max-width: 100%;
+}
+
+.rating {
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+.book-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
